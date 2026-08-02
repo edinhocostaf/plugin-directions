@@ -1,0 +1,64 @@
+{
+    "name": "keepcloud/plugin-directions",
+    "version": "1.0.0",
+    "description": "Real-route distance and travel time (MapKit on iOS) to multiple destinations",
+    "namespace": "Directions",
+    "keywords": ["directions", "routing", "distance", "eta", "mapkit"],
+    "category": "utilities",
+    "license": "MIT",
+    "pricing": {
+        "type": "free"
+    },
+    "author": {
+        "name": "Keepcloud",
+        "email": "dev@keepcloud.com.br",
+        "url": "https://github.com/keepcloud"
+    },
+    "homepage": "https://github.com/keepcloud/plugin-directions",
+    "repository": "https://github.com/keepcloud/plugin-directions",
+    "funding": [],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "screenshots": [],
+    "bridge_functions": [
+        {
+            "name": "Directions.Distances",
+            "android": "com.keepcloud.plugins.directions.DirectionsFunctions.Distances",
+            "ios": "DirectionsFunctions.Distances",
+            "description": "Real-route distance and travel time from an origin to multiple destinations"
+        }
+    ],
+    "android": {
+        "min_version": 21,
+        "permissions": [],
+        "repositories": [],
+        "dependencies": {
+            "implementation": []
+        },
+        "activities": [],
+        "services": [],
+        "receivers": [],
+        "providers": []
+    },
+    "ios": {
+        "min_version": "15.0",
+        "permissions": [],
+        "repositories": [],
+        "dependencies": {
+            "swift_packages": [],
+            "pods": []
+        }
+    },
+    "assets": {
+        "android": [],
+        "ios": []
+    },
+    "secrets": [],
+    "events": [
+        "Keepcloud\\Directions\\Events\\DistancesReceived"
+    ],
+    "service_provider": "Keepcloud\\Directions\\DirectionsServiceProvider",
+    "hooks": {}
+}

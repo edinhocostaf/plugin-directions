@@ -1,0 +1,46 @@
+{
+    "name": "keepcloud/plugin-directions",
+    "description": "Real-route distance and ETA (MapKit on iOS) to multiple destinations, for NativePHP Mobile",
+    "type": "nativephp-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "keywords": ["nativephp", "mobile", "directions", "routing", "distance", "eta", "mapkit"],
+    "authors": [
+        {
+            "name": "Keepcloud",
+            "email": "dev@keepcloud.com.br"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "nativephp/mobile": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Keepcloud\\Directions\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Keepcloud\\Directions\\DirectionsServiceProvider"
+            ]
+        },
+        "nativephp": {
+            "manifest": "nativephp.json"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0"
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
